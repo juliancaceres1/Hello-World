@@ -17,12 +17,11 @@ paises_pib = [
 paises_pib_ordenados = sorted(paises_pib, key=lambda x: x["pib"], reverse=True)
 
 # Generar una tabla con los países y sus capitales ordenados por PIB
-tabla = "| País | Capital | PIB (en millones de dólares) |\n| --- | --- | --- |\n"
+tabla = "| País | PIB (en millones de dólares) |\n| --- | --- | --- |\n"
 for pais_pib in paises_pib_ordenados:
     pais = pais_pib["pais"]
     pib = pais_pib["pib"]
-    capital = obtener_capital_del_pais(pais) # función que se debe definir para obtener la capital del país
-    tabla += f"| {pais} | {capital} | {pib:,} |\n"
+    tabla += f"| {pais}  | {pib:,} |\n"
 
 # Imprimir la tabla
 print(tabla)
